@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 body {
-  @apply bg-white;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  @apply bg-white font-nunitoSans;
 }
 
 section {
   @apply mx-8;
+}
+
+textarea {
+  resize: none;
 }

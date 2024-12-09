@@ -16,7 +16,12 @@ export default {
         secondary: "#FCC9BE",
         salmon: "#FDEEE8",
         led: "#E1E0F5",
-        secondaryDark: "#FBAB99"
+        secondaryDark: "#FBAB99",
+        btn: "#1873DE"
+      },
+      fontFamily: {
+        nunitoSans: ["var(--font-nunito-sans)"],
+        libreBodoni: ["var(--font-libre-bodoni)"],
       },
     },
   },

@@ -16,14 +16,16 @@ export const TitleSection: React.FC<SectionProps> = ({ anchor }) => {
         <div className="flex flex-col gap-y-4 justify-center items-center h-full">
           <div>
             <div className="flex justify-center mb-8">
-              <SectionHeader label="Getting in contact with your body" stripeColor="bg-white" />
+              <SectionHeader label="Getting in contact with your body" stripeColor="bg-white" className="font-thin" />
             </div>
-            <div className="text-7xl font-semibold">
+            <div className="text-7xl font-bold tracking-wide">
               <div>HOLOSOMATIC</div>
               <div>BODYWORK</div>
             </div>
           </div>
-          <Button label="Get in touch" />
+          <div className="mt-10">
+            <Button label="Get in touch" href="#contact" />
+          </div>
         </div>
       </div>
     </section >

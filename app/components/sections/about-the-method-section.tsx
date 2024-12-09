@@ -11,7 +11,7 @@ export const AboutTheMethodSection: React.FC<SectionProps> = ({ anchor }) => {
       <div className="flex justify-center">
         <div>
           <div className="flex justify-center mb-4">
-            <SectionHeader label="ABOUT THE METHOD" stripeColor="bg-salmon" className="font-semibold" />
+            <SectionHeader label="ABOUT THE METHOD" stripeColor="bg-salmon" className="font-bold" />
           </div>
           <div className="text-primary max-w-[710px]">
             Holosomatic BODY Therapy® focuses on Bodywork and Somatic techniques for emotional and trauma release, blending leading-edge bodywork methods with neuroscience, psychology, breathwork, movement therapy, and energy work. Holosomatic BODY Therapy® provides a direct approach to healing and understanding the links between diseases, traumas, blockages and energy stagnation.

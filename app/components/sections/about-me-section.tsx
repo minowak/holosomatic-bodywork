@@ -8,7 +8,7 @@ export const AboutMeSection: React.FC<SectionProps> = ({ anchor }) => {
       <div className="flex justify-center">
         <div>
           <div className="flex justify-center mb-4">
-            <SectionHeader label="ABOUT ME" stripeColor="bg-white" className="font-semibold" />
+            <SectionHeader label="ABOUT ME" stripeColor="bg-white" className="font-bold" />
           </div>
           <div className="bg-red-600 relative h-[853px] w-[845px] overflow-hidden">
             <Image src={image} alt="" className="-mt-[50px]" />
