@@ -9,8 +9,9 @@ export const TitleSection: React.FC<SectionProps> = ({ anchor, lang }) => {
   const t = getTranslations(lang);
 
   return (
-    <section id={anchor} className="bg-salmon text-primary text-center h-[600px] relative overflow-hidden">
-      <div className="absolute inset-0" style={{
+    <section id={anchor} className="bg-salmon text-primary text-center h-[600px] relative overflow-hidden"
+      style={{ clipPath: "inset(0 0 0 0)" }}>
+      <div className="fixed inset-0" style={{
         backgroundImage: `url(${bgImage.src})`,
         backgroundSize: "cover",
       }}></div>

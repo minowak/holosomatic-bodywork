@@ -27,7 +27,10 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
         </menu>
         <div className="flex-1 text-right text-sm font-semibold">
           <DropdownMenu>
-            <DropdownMenuTrigger><ReactCountryFlag countryCode={lang === "en" ? "GB" : lang?.toUpperCase() || "UK"} className="mr-2" />{(t as any)[lang || "en"]}</DropdownMenuTrigger>
+            <DropdownMenuTrigger>
+              <ReactCountryFlag countryCode={lang === "en" ? "GB" : lang?.toUpperCase() || "UK"} className="mr-2" />
+              <span className="font-bold">{(t as any)[lang || "en"]}</span>
+            </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem><Link href="/en" replace><ReactCountryFlag countryCode="GB" className="mr-2" />{t.en}</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="/pl" replace><ReactCountryFlag countryCode="PL" className="mr-2" />{t.pl}</Link></DropdownMenuItem>

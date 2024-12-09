@@ -8,10 +8,12 @@ export const AboutTheMethodSection: React.FC<SectionProps> = ({ anchor, lang }) 
 
   return (
     <section id={anchor} className="bg-white relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${bgImage.src})`,
-        backgroundSize: "cover",
-      }}>
+      style={{ clipPath: "inset(0 0 0 0)" }}>
+      <div className="fixed inset-0 -z-10"
+        style={{
+          backgroundImage: `url(${bgImage.src})`,
+          backgroundSize: "cover",
+        }}></div>
       <div className="flex justify-center">
         <div>
           <div className="flex justify-center mb-4">
