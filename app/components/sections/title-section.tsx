@@ -1,5 +1,5 @@
 import { Logo } from "@/components/svg/logo";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/contact-button";
 import { SectionHeader } from "@/components/ui/section-header";
 import bgImage from "@/assets/bg.avif";
 
