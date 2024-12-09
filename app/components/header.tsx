@@ -4,6 +4,7 @@ import { SectionProps } from "@/components/sections/types";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import ReactCountryFlag from "react-country-flag";
 import Link from "next/link";
+import { MenuIcon } from "lucide-react";
 
 export const Header: React.FC<SectionProps> = ({ lang }) => {
   const t = getTranslations(lang);
@@ -17,6 +18,20 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
             <span className="text-lg font-bold mr-2">Yuliia Pinchuk</span>
             <span className="md:inline hidden">{t.facilitator}</span>
           </div>
+        </div>
+        <div className="visible md:hidden cursor-pointer">
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <MenuIcon className="size-8" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="mr-8">
+              <DropdownMenuItem className="text-xl"><a href="#home">{t.home}</a></DropdownMenuItem>
+              <DropdownMenuItem className="text-xl"><a href="#services">{t.services}</a></DropdownMenuItem>
+              <DropdownMenuItem className="text-xl"><a href="#about-me">{t.about}</a></DropdownMenuItem>
+              <DropdownMenuItem className="text-xl"><a href="#about-the-method">{t.method}</a></DropdownMenuItem>
+              <DropdownMenuItem className="text-xl"><a href="#contact">{t.contact}</a></DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
         <menu className="md:flex gap-4 flex-1 justify-center hidden">
           <MenuItem label={t.home} anchor="home" />
