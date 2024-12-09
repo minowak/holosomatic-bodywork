@@ -45,7 +45,7 @@ export const Gallery: React.FC = () => {
   return (
     <div className="grid grid-cols-3 gap-4 w-fit">
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="px-16 max-w-[1000px] max-h-[1000px]">
+        <DialogContent className="px-16 max-w-[1000px]">
           <DialogTitle className="hidden">Gallery</DialogTitle>
           <DialogHeader>
             <DialogDescription>

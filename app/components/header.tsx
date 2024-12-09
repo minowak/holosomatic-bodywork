@@ -1,6 +1,9 @@
 import { getTranslations } from "@/lib/utils";
-import { Logo } from "./svg/logo";
-import { SectionProps } from "./sections/types";
+import { Logo } from "@/components/svg/logo";
+import { SectionProps } from "@/components/sections/types";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import ReactCountryFlag from "react-country-flag";
+import Link from "next/link";
 
 export const Header: React.FC<SectionProps> = ({ lang }) => {
   const t = getTranslations(lang);
@@ -22,8 +25,16 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
           <MenuItem label={t.method} anchor="about-the-method" />
           <MenuItem label={t.contact} anchor="contact" />
         </menu>
-        <div className="flex-1 text-right">
-          English
+        <div className="flex-1 text-right text-sm font-semibold">
+          <DropdownMenu>
+            <DropdownMenuTrigger><ReactCountryFlag countryCode={lang === "en" ? "GB" : lang?.toUpperCase() || "UK"} className="mr-2" />{(t as any)[lang || "en"]}</DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem><Link href="/en" replace><ReactCountryFlag countryCode="GB" className="mr-2" />{t.en}</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/pl" replace><ReactCountryFlag countryCode="PL" className="mr-2" />{t.pl}</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/ru" replace><ReactCountryFlag countryCode="RU" className="mr-2" />{t.ru}</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/ua" replace><ReactCountryFlag countryCode="UA" className="mr-2" />{t.ua}</Link></DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
