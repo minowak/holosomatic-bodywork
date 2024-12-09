@@ -18,6 +18,32 @@ const libreBodoni = Libre_Bodoni({
 export const metadata: Metadata = {
   title: "Holosomatic Bodywork",
   description: "Holosomatic Bodywork by Yuliia Pinchuk",
+  keywords: [
+    "holosomatic",
+    "bodywork",
+    "breathing",
+    "polyvagal",
+    "energy work",
+    "body mapping",
+    "cracow",
+    "krakow",
+    "breathwork",
+    "theraphy",
+    "movement",
+    "tension",
+    "trauma",
+    "expression",
+    "emotion",
+    "healing",
+    "neuroscience",
+    "natural healing",
+    "workshops",
+    "chinese medicine",
+    "energy flow",
+    "chakras",
+    "taoism",
+    "wilhelm reich",
+  ]
 };
 
 export default function RootLayout({
