@@ -19,7 +19,7 @@ export const GetInTouchSection: React.FC<SectionProps> = ({ anchor, lang }) => {
               <Image src={instagram} alt="" className="size-9" />
             </a>
           </div>
-          <div className="mt-16 space-y-2 w-[570px]">
+          <div className="mt-16 space-y-2 md:w-[570px]">
             <ContactFormInput label={t.name} type="text" id="name" />
             <ContactFormInput label={t.email} type="email" id="email" />
             <ContactFormInput label={t.your_request} type="textarea" id="request" />

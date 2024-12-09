@@ -14,18 +14,18 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
         <div className="flex gap-4 items-center flex-1">
           <div><Logo className="size-8" /></div>
           <div>
-            <span className="font-bold mr-2">Yuliia Pinchuk</span>
-            <span className="md:visible hidden">{t.facilitator}</span>
+            <span className="text-lg font-bold mr-2">Yuliia Pinchuk</span>
+            <span className="md:inline hidden">{t.facilitator}</span>
           </div>
         </div>
-        <menu className="flex gap-4 flex-1 justify-center">
+        <menu className="md:flex gap-4 flex-1 justify-center hidden">
           <MenuItem label={t.home} anchor="home" />
           <MenuItem label={t.services} anchor="services" />
           <MenuItem label={t.about} anchor="about-me" />
           <MenuItem label={t.method} anchor="about-the-method" />
           <MenuItem label={t.contact} anchor="contact" />
         </menu>
-        <div className="flex-1 text-right text-sm font-semibold">
+        <div className="hidden md:block flex-1 text-right text-sm font-semibold">
           <DropdownMenu>
             <DropdownMenuTrigger>
               <ReactCountryFlag countryCode={lang === "en" ? "GB" : lang?.toUpperCase() || "UK"} className="mr-2" />

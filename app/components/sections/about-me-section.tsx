@@ -14,9 +14,9 @@ export const AboutMeSection: React.FC<SectionProps> = ({ anchor, lang }) => {
           <div className="flex justify-center mb-4">
             <SectionHeader label={t.about} stripeColor="bg-white" className="font-bold" />
           </div>
-          <div className="bg-red-600 relative h-[853px] w-[845px] overflow-hidden">
-            <Image src={image} alt="" className="-mt-[50px]" />
-            <div className="bg-white absolute text-primary left-10 right-10 bottom-32 p-10 text-center font-thin">
+          <div className="relative max-w-screen">
+            <Image src={image} alt="" className="md:px-16 md:h-auto h-[700px]" style={{ objectFit: "cover" }} />
+            <div className="bg-white absolute text-primary left-4 right-4 bottom-4 md:left-32 md:right-32 md:bottom-64 p-10 text-center font-thin">
               {t.about_me_1}
               <a className="underline cursor-pointer" href="https://innercamp.com/product/bodywork-teacher-training/" rel="noopener noreferrer" target="_blank">Holosomatic BODY Therapy®.</a>
               {t.about_me_2}

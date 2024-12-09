@@ -23,7 +23,7 @@ export const TitleSection: React.FC<SectionProps> = ({ anchor, lang }) => {
             <div className="flex justify-center mb-8">
               <SectionHeader label={t.home_desc} stripeColor="bg-white" className="font-thin" />
             </div>
-            <div className="text-7xl font-bold tracking-wide">
+            <div className="text-4xl md:text-7xl font-bold tracking-wide">
               <div>{t.title1}</div>
               <div>{t.title2}</div>
             </div>

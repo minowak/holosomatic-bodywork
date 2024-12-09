@@ -83,7 +83,7 @@ export const Gallery: React.FC = () => {
         </Fullscreen>
       </div>
       <div className="flex justify-center pt-16">
-        <div className="grid grid-cols-3 gap-4 w-fit outline-none focus:outline-none"
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-fit outline-none focus:outline-none"
           tabIndex={0}>
           {
             images.slice(0, 9).map((image, idx) => {
@@ -93,6 +93,9 @@ export const Gallery: React.FC = () => {
               }} />)
             })
           }
+          <div className="block md:hidden">
+            <GalleryItem image={images[9]} onClick={onClick} />
+          </div>
         </div>
       </div>
     </div>

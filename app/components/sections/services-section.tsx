@@ -19,7 +19,7 @@ export const ServicesSection: React.FC<SectionProps> = ({ anchor, lang }) => {
             label={t.services}
             stripeColor="bg-white"
             className="text-primary font-bold tracking-widest" />
-          <div className="flex justify-between gap-32 max-w-[1000px]">
+          <div className="md:flex justify-between gap-32 max-w-[1000px]">
             <ServiceSection
               number="01"
               title={t.individual_session}
@@ -48,7 +48,7 @@ type ServiceSectionProps = {
 
 export const ServiceSection: React.FC<ServiceSectionProps> = ({ number, title, desc, price }) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 mx-8 md:mx-0 mb-16 md:mb-0">
       <div className="flex gap-4 items-end">
         <div className="text-secondaryDark italic text-5xl font-semibold font-libreBodoni">{number}</div>
         <div className="text-primary font-bold">{title}</div>

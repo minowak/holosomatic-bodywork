@@ -19,7 +19,7 @@ export const AboutTheMethodSection: React.FC<SectionProps> = ({ anchor, lang }) 
           <div className="flex justify-center mb-4">
             <SectionHeader label={t.about_method} stripeColor="bg-salmon" className="font-bold" />
           </div>
-          <div className="text-primary max-w-[710px] font-thin leading-8">
+          <div className="text-primary max-w-[710px] font-thin leading-8 mx-8 md:mx-0">
             {t.method_desc_1}
             <br />
             {t.method_desc_2}
