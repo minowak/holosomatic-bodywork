@@ -8,3 +8,7 @@ body {
   @apply bg-white;
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
+
+section {
+  @apply mx-8;
+}

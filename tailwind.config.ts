@@ -14,7 +14,9 @@ export default {
         footer: "#144279",
         primary: "#165DB0",
         secondary: "#FCC9BE",
-        salmon: "#FDEEE8"
+        salmon: "#FDEEE8",
+        led: "#E1E0F5",
+        secondaryDark: "#FBAB99"
       },
     },
   },
