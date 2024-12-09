@@ -1,4 +1,5 @@
 import { Gallery } from "@/components/ui/gallery";
+import { SectionProps } from "./types";
 
 export const GallerySection: React.FC<SectionProps> = ({ anchor }) => {
   return (

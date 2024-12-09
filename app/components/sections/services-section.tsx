@@ -1,7 +1,11 @@
 import { SectionHeader } from "@/components/ui/section-header";
 import bgImage from "@/assets/bg2.avif";
+import { SectionProps } from "./types";
+import { getTranslations } from "@/lib/utils";
 
-export const ServicesSection: React.FC<SectionProps> = ({ anchor }) => {
+export const ServicesSection: React.FC<SectionProps> = ({ anchor, lang }) => {
+  const t = getTranslations(lang);
+
   return (
     <section id={anchor} className="bg-white relative">
       <div className="absolute inset-0 opacity-20" style={{
@@ -12,20 +16,20 @@ export const ServicesSection: React.FC<SectionProps> = ({ anchor }) => {
       <div className="flex justify-center w-full">
         <div className="flex flex-col gap-y-16 justify-center items-center h-full">
           <SectionHeader
-            label="SERVICES"
+            label={t.services}
             stripeColor="bg-white"
             className="text-primary font-bold tracking-widest" />
           <div className="flex justify-between gap-32 max-w-[1000px]">
             <ServiceSection
               number="01"
-              title="INDIVIDUAL SESSION"
-              desc="A session dedicated only to you during which I am observing the reactions of your body and helping to release long held trauma and tension. In the end of session I give you the instruments that you can use at home to connect to your body and better understand yourself."
+              title={t.individual_session}
+              desc={t.individual_session_description}
               price="1.5H - 100zl"
             />
             <ServiceSection
               number="02"
-              title="GROUP SESSION"
-              desc="A session led in a group environment where you observe the reactions of your body and being directed on the movements needed for establishing connection with the body and releasing stagnant emotions and blockages. "
+              title={t.group_session}
+              desc={t.group_session_description}
               price="1.5H - 50zl"
             />
           </div>

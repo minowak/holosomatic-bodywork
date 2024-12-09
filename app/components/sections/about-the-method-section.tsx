@@ -1,7 +1,11 @@
 import bgImage from "@/assets/bg3.avif";
 import { SectionHeader } from "@/components/ui/section-header";
+import { SectionProps } from "./types";
+import { getTranslations } from "@/lib/utils";
 
-export const AboutTheMethodSection: React.FC<SectionProps> = ({ anchor }) => {
+export const AboutTheMethodSection: React.FC<SectionProps> = ({ anchor, lang }) => {
+  const t = getTranslations(lang);
+
   return (
     <section id={anchor} className="bg-white relative overflow-hidden"
       style={{
@@ -11,23 +15,32 @@ export const AboutTheMethodSection: React.FC<SectionProps> = ({ anchor }) => {
       <div className="flex justify-center">
         <div>
           <div className="flex justify-center mb-4">
-            <SectionHeader label="ABOUT THE METHOD" stripeColor="bg-salmon" className="font-bold" />
+            <SectionHeader label={t.about_method} stripeColor="bg-salmon" className="font-bold" />
           </div>
-          <div className="text-primary max-w-[710px]">
-            Holosomatic BODY Therapy® focuses on Bodywork and Somatic techniques for emotional and trauma release, blending leading-edge bodywork methods with neuroscience, psychology, breathwork, movement therapy, and energy work. Holosomatic BODY Therapy® provides a direct approach to healing and understanding the links between diseases, traumas, blockages and energy stagnation.
+          <div className="text-primary max-w-[710px] font-thin leading-8">
+            {t.method_desc_1}
             <br />
-            It leverages Polyvagal Theory for stress responses, Wilhelm Reich's techniques for emotional release, and Peter Levine's somatic experiencing for trauma recovery.
+            {t.method_desc_2}
             <br />
-            A holistic approach
-            <br />
-            Conscious Connected Breathwork
-            Regulate the body's physiological state, facilitating emotional release and energetic balance.
-            Energy Work
-            Draw from the wisdom of chakras, Taoist practices, and traditional Chinese medicine to harmonize the body's energy flow.
-            Body Mapping
-            Identify and work through areas of physical and emotional tension, utilizing vocal toning and sound healing practices to activate the body's natural healing capacities through vibration.
-            Movement therapy
-            Further support the process by encouraging the expression of emotions and the release of physical tension, promoting a holistic path to well-being that honors the interconnectedness of mind, body, and spirit.
+            <div className="font-medium text-xl mt-4">
+              {t.hollistic_approach}
+            </div>
+            <div className="font-medium mt-2">
+              {t.connected_breathwork}
+            </div>
+            {t.conencted_breathwork_desc}
+            <div className="font-medium mt-2">
+              {t.energy_work}
+            </div>
+            {t.energy_work_desc}
+            <div className="font-medium mt-2">
+              {t.body_mapping}
+            </div>
+            {t.body_mapping_desc}
+            <div className="font-medium mt-2">
+              {t.movement_therapy}
+            </div>
+            {t.movement_therapy_desc}
           </div>
         </div>
       </div>
