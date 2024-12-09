@@ -15,12 +15,29 @@ import image12 from "@/assets/images/12.webp";
 import image13 from "@/assets/images/13.webp";
 import Image, { StaticImageData } from 'next/image';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './dialog';
-import { useState } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./carousel";
+import { useEffect, useState } from "react";
+import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./carousel";
+import { Fullscreen } from "./fullscreen";
 
 export const Gallery: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
 
   const onClick = () => {
     setOpen(true);
@@ -43,35 +60,42 @@ export const Gallery: React.FC = () => {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-4 w-fit">
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="px-16 max-w-[1000px]">
-          <DialogTitle className="hidden">Gallery</DialogTitle>
-          <DialogHeader>
-            <DialogDescription>
-              <Carousel opts={
-                { startIndex: startIndex }
-              } >
-                <CarouselContent>
-                  {images.map((image, idx) => {
-                    return (<CarouselItem key={"item_" + idx}>
-                      <Image src={image} alt="" className="" />
-                    </CarouselItem>)
-                  })}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
-      {images.slice(0, 9).map((image, idx) => {
-        return (<GalleryItem key={"gallery_" + idx} image={image} onClick={() => {
-          setStartIndex(idx);
-          onClick();
-        }} />)
-      })}
+    <div onKeyDown={(e) => { if (e.key === "Escape") setOpen(false) }}>
+      <div>
+        <Fullscreen open={open} onOpenChanged={setOpen}>
+          <div className="w-[600px] overflow-visible">
+            <Carousel opts={
+              { startIndex: startIndex }
+            }
+              setApi={setApi}>
+              <CarouselContent
+              >
+                {images.map((image, idx) => {
+                  return (<CarouselItem key={"item_" + idx}>
+                    <Image src={image} alt="" className="w-[600px]" style={{ objectFit: "contain" }} />
+                  </CarouselItem>)
+                })}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+            <div className="mt-2 text-center text-gray-400">{current}/{count}</div>
+          </div>
+        </Fullscreen>
+      </div>
+      <div className="flex justify-center pt-16">
+        <div className="grid grid-cols-3 gap-4 w-fit"
+          tabIndex={0}>
+          {
+            images.slice(0, 9).map((image, idx) => {
+              return (<GalleryItem key={"gallery_" + idx} image={image} onClick={() => {
+                setStartIndex(idx);
+                onClick();
+              }} />)
+            })
+          }
+        </div>
+      </div>
     </div>
   );
 }
