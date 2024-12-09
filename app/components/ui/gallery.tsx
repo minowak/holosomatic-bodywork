@@ -45,17 +45,17 @@ export const Gallery: React.FC = () => {
   return (
     <div className="grid grid-cols-3 gap-4 w-fit">
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="px-16">
+        <DialogContent className="px-16 max-w-[1000px] max-h-[1000px]">
           <DialogTitle className="hidden">Gallery</DialogTitle>
           <DialogHeader>
             <DialogDescription>
               <Carousel opts={
                 { startIndex: startIndex }
-              }>
+              } >
                 <CarouselContent>
                   {images.map((image, idx) => {
                     return (<CarouselItem key={"item_" + idx}>
-                      <Image src={image} alt="" />
+                      <Image src={image} alt="" className="" />
                     </CarouselItem>)
                   })}
                 </CarouselContent>
