@@ -19,3 +19,7 @@ textarea {
     --radius: 0.5rem;
   }
 }
+
+body.no-scroll {
+  @apply overflow-hidden;
+}

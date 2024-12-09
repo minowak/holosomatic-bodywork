@@ -63,7 +63,7 @@ export const Gallery: React.FC = () => {
     <div onKeyDown={(e) => { if (e.key === "Escape") setOpen(false) }}>
       <div>
         <Fullscreen open={open} onOpenChanged={setOpen}>
-          <div className="w-[600px] overflow-visible">
+          <div className="max-w-[600px]">
             <Carousel opts={
               { startIndex: startIndex }
             }
@@ -72,7 +72,7 @@ export const Gallery: React.FC = () => {
               >
                 {images.map((image, idx) => {
                   return (<CarouselItem key={"item_" + idx}>
-                    <Image src={image} alt="" className="w-[600px]" style={{ objectFit: "contain" }} />
+                    <Image src={image} alt="" className="max-w-[600px]" style={{ objectFit: "contain" }} />
                   </CarouselItem>)
                 })}
               </CarouselContent>
@@ -84,7 +84,7 @@ export const Gallery: React.FC = () => {
         </Fullscreen>
       </div>
       <div className="flex justify-center pt-16">
-        <div className="grid grid-cols-3 gap-4 w-fit"
+        <div className="grid grid-cols-3 gap-4 w-fit outline-none focus:outline-none"
           tabIndex={0}>
           {
             images.slice(0, 9).map((image, idx) => {

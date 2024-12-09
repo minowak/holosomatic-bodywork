@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect } from "react";
 
 type Props = PropsWithChildren & {
   open?: boolean
@@ -6,6 +6,14 @@ type Props = PropsWithChildren & {
 }
 
 export const Fullscreen: React.FC<Props> = ({ children, open, onOpenChanged }) => {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [open]);
+
   return (
     <>
       {
