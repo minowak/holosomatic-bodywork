@@ -14,7 +14,6 @@ import image11 from "@/assets/images/11.webp";
 import image12 from "@/assets/images/12.webp";
 import image13 from "@/assets/images/13.webp";
 import Image, { StaticImageData } from 'next/image';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './dialog';
 import { useEffect, useState } from "react";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./carousel";
 import { Fullscreen } from "./fullscreen";
@@ -63,7 +62,7 @@ export const Gallery: React.FC = () => {
     <div onKeyDown={(e) => { if (e.key === "Escape") setOpen(false) }}>
       <div>
         <Fullscreen open={open} onOpenChanged={setOpen}>
-          <div className="max-w-[600px]">
+          <div className="md:max-w-[600px] max-w-[300px]">
             <Carousel opts={
               { startIndex: startIndex }
             }
@@ -72,7 +71,7 @@ export const Gallery: React.FC = () => {
               >
                 {images.map((image, idx) => {
                   return (<CarouselItem key={"item_" + idx}>
-                    <Image src={image} alt="" className="max-w-[600px]" style={{ objectFit: "contain" }} />
+                    <Image src={image} alt="" className="md:max-w-[600px] max-w-[300px]" style={{ objectFit: "contain" }} />
                   </CarouselItem>)
                 })}
               </CarouselContent>

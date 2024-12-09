@@ -15,7 +15,7 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
           <div><Logo className="size-8" /></div>
           <div>
             <span className="font-bold mr-2">Yuliia Pinchuk</span>
-            {t.facilitator}
+            <span className="md:visible hidden">{t.facilitator}</span>
           </div>
         </div>
         <menu className="flex gap-4 flex-1 justify-center">

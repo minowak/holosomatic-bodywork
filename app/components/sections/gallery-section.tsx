@@ -11,7 +11,7 @@ export const GallerySection: React.FC<SectionProps> = ({ anchor, lang }) => {
         <div className="flex justify-center">
           <div>
             <div className="text-primary font-semibold text-4xl max-w-[580px] text-center">
-              "{t.quote}"
+              {t.quote}
             </div>
             <div className="text-center text-secondaryDark italic mt-4 font-libreBodoni">
               - Lao Tzu
