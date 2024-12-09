@@ -8,7 +8,7 @@ import { AboutTheMethodSection } from "@/components/sections/about-the-method-se
 import { GetInTouchSection } from "../components/sections/get-in-touch";
 import { Language } from "@/lib/utils";
 
-type PropsType = {
+export type PropsType = {
   params: Promise<{ lang: string }>;
 };
 
@@ -16,11 +16,9 @@ export default async function Home({ params }: PropsType) {
   const p = await params;
   const lang = p.lang as Language;
 
-  console.log(lang);
-
   return (
     <div id="home">
-      <Header />
+      <Header lang={lang} />
       <main>
         <TitleSection anchor="title" lang={lang} />
         <ServicesSection anchor="services" lang={lang} />

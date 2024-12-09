@@ -1,4 +1,4 @@
-import { getTranslations, Language } from "@/lib/utils";
+import { getTranslations } from "@/lib/utils";
 import { Logo } from "./svg/logo";
 import { SectionProps } from "./sections/types";
 
