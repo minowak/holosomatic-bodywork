@@ -4,7 +4,7 @@ import image from "@/assets/images/4.webp";
 
 export const AboutMeSection: React.FC<SectionProps> = ({ anchor }) => {
   return (
-    <section id={anchor} className="py-16 bg-salmon">
+    <section id={anchor} className="bg-salmon">
       <div className="flex justify-center">
         <div>
           <div className="flex justify-center mb-4">

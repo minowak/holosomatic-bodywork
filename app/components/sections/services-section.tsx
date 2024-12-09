@@ -3,14 +3,14 @@ import bgImage from "@/assets/bg2.avif";
 
 export const ServicesSection: React.FC<SectionProps> = ({ anchor }) => {
   return (
-    <section id={anchor} className="py-16 bg-white relative">
+    <section id={anchor} className="bg-white relative">
       <div className="absolute inset-0 opacity-20" style={{
         backgroundImage: `url(${bgImage.src})`,
         backgroundSize: "cover",
         objectPosition: "50% 50%",
       }}></div>
       <div className="flex justify-center w-full">
-        <div className="flex flex-col gap-y-4 justify-center items-center h-full">
+        <div className="flex flex-col gap-y-16 justify-center items-center h-full">
           <SectionHeader
             label="SERVICES"
             stripeColor="bg-white"

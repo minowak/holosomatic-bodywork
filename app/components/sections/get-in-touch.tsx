@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const GetInTouchSection: React.FC<SectionProps> = ({ anchor }) => {
   return (
     <section id={anchor}>
-      <div className="flex justify-center bg-white py-16">
+      <div className="flex justify-center bg-white">
         <div>
           <div className="flex justify-center">
             <SectionHeader label="GET IN TOUCH" className="font-bold" />

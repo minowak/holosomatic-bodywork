@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 
 export const AboutTheMethodSection: React.FC<SectionProps> = ({ anchor }) => {
   return (
-    <section id={anchor} className="py-16 bg-white relative overflow-hidden"
+    <section id={anchor} className="bg-white relative overflow-hidden"
       style={{
         backgroundImage: `url(${bgImage.src})`,
         backgroundSize: "cover",
