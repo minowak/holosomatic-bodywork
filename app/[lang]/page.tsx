@@ -5,8 +5,17 @@ import { ServicesSection } from "@/components/sections/services-section";
 import { GallerySection } from "@/components/sections/gallery-section";
 import { AboutMeSection } from "@/components/sections/about-me-section";
 import { AboutTheMethodSection } from "@/components/sections/about-the-method-section";
-import { GetInTouchSection } from "../components/sections/get-in-touch";
+import { GetInTouchSection } from "../components/sections/contact-section";
 import { Language } from "@/lib/utils";
+
+export async function generateStaticParams() {
+  return [
+    { lang: "en" },
+    { lang: "pl" },
+    { lang: "ru" },
+    { lang: "ua" },
+  ];
+}
 
 export type PropsType = {
   params: Promise<{ lang: string }>;

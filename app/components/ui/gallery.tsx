@@ -94,7 +94,10 @@ export const Gallery: React.FC = () => {
             })
           }
           <div className="block md:hidden">
-            <GalleryItem image={images[9]} onClick={onClick} />
+            <GalleryItem image={images[9]} onClick={() => {
+              setStartIndex(9);
+              onClick();
+            }} />
           </div>
         </div>
       </div>

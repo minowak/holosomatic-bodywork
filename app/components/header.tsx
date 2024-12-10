@@ -19,9 +19,9 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
       <div className="flex justify-between gap-4 items-center">
         <div className="flex gap-4 items-center flex-1">
           <div><Logo className="size-8" /></div>
-          <div>
-            <span className="text-lg font-bold mr-2">Yuliia Pinchuk</span>
-            <span className="md:inline hidden">{t.facilitator}</span>
+          <div className="flex gap-2 items-center">
+            <div className="text-lg font-bold mr-2">Yuliia Pinchuk</div>
+            <div className="lg:inline hidden">{t.facilitator}</div>
           </div>
         </div>
         <menu className="md:flex gap-4 flex-1 justify-center hidden items-center">

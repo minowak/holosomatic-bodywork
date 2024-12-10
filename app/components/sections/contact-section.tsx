@@ -16,17 +16,17 @@ export const GetInTouchSection: React.FC<SectionProps> = ({ anchor, lang }) => {
           </div>
           <div className="flex justify-center">
             <a href="https://www.instagram.com/yuliia.pinchuk/" rel="noopener noreferrer" target="_blank">
-              <Image src={instagram} alt="" className="size-9" />
+              <Image src={instagram} alt="" className="size-16" />
             </a>
           </div>
-          <div className="mt-16 space-y-2 md:w-[570px]">
-            <ContactFormInput label={t.name} type="text" id="name" />
-            <ContactFormInput label={t.email} type="email" id="email" />
-            <ContactFormInput label={t.your_request} type="textarea" id="request" />
-            <div className="px-8 py-2 bg-salmon cursor-pointer duration-300 text-primary hover:text-salmon hover:bg-primary font-bold text-center">
-              {t.send}
-            </div>
-          </div>
+          {/* <div className="mt-16 space-y-2 md:w-[570px]"> */}
+          {/*   <ContactFormInput label={t.name} type="text" id="name" /> */}
+          {/*   <ContactFormInput label={t.email} type="email" id="email" /> */}
+          {/*   <ContactFormInput label={t.your_request} type="textarea" id="request" /> */}
+          {/*   <div className="px-8 py-2 bg-salmon cursor-pointer duration-300 text-primary hover:text-salmon hover:bg-primary font-bold text-center"> */}
+          {/*     {t.send} */}
+          {/*   </div> */}
+          {/* </div> */}
         </div>
       </div>
     </section>
