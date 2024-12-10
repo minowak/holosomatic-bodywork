@@ -13,7 +13,7 @@ function sendMail($name, $email, $request) {
     mail(
       'holosomatic.bodywork@yuliiapinchuk.com, juliannapinchuk@gmail.com', 
       '[Holosomatic Bodywork] New request', 
-      'From: '.$name."\r\n".'Email: '.$email."\r\n\r\n".'Request: '.$request, 
+      'From: '.$name."\r\n".'Email: '.$email."\r\n\r\n".'=== Request ==='."\r\n".$request, 
       $headers
     ) 
   ){
