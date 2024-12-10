@@ -36,5 +36,9 @@
   "pl": "Polski",
   "en": "Angielski",
   "ru": "Rosyjski",
-  "ua": "Ukraiński"
+  "ua": "Ukraiński",
+  "contact_dialog_success": "Dziękuję!",
+  "contact_dialog_success_desc": "Twoje zapytanie zostało wysłane",
+  "contact_dialog_error": "Ups, coś poszło nie tak",
+  "contact_dialog_error_desc": "Wystąpił błąd podczas wysyłania Twojego żądania"
 }

@@ -36,5 +36,9 @@
   "pl": "польська",
   "en": "англійська",
   "ru": "російська",
-  "ua": "український"
+  "ua": "український",
+  "contact_dialog_success": "Дякую!",
+  "contact_dialog_success_desc": "Ваш запит надіслано",
+  "contact_dialog_error": "Ой, щось пішло не так",
+  "contact_dialog_error_desc": "Під час надсилання запиту сталася помилка"
 }
