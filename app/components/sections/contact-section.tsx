@@ -34,10 +34,9 @@ export const GetInTouchSection: React.FC<SectionProps> = ({ anchor, lang }) => {
 
     const params = new URLSearchParams({ name, email, request });
 
-    new Promise(r => setTimeout(r, 2000))
-      // fetch("/mail.php?" + params.toString(), {
-      //   method: 'POST',
-      // })
+    fetch("/mail.php?" + params.toString(), {
+      method: 'POST',
+    })
       .then((r) => {
         nameRef.current!.value = "";
         emailRef.current!.value = "";
