@@ -14,6 +14,8 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
     lineHeight: '0em',
   }
 
+  const flagClass = "mr-2 md:mb-0 !h-auto border border-gray-300 mr-2";
+
   return (
     <header className="sticky top-0 z-50 shadow-md text-primary px-8 py-4 bg-white">
       <div className="flex justify-between gap-4 items-center">
@@ -34,15 +36,17 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
         <div className="md:flex-1 text-right text-sm font-semibold">
           <DropdownMenu>
             <DropdownMenuTrigger>
-              <ReactCountryFlag countryCode={lang === "en" ? "GB" : lang?.toUpperCase() || "UK"} className="mr-2 mb-1 md:mb-0"
-                style={flagStyle} />
-              <span className="font-bold hidden md:inline">{(t as any)[lang || "en"]}</span>
+              <div className="flex items-center">
+                <ReactCountryFlag svg countryCode={lang === "en" ? "GB" : lang?.toUpperCase() || "UK"} className={flagClass}
+                  style={flagStyle} />
+                <div className="font-bold hidden md:inline">{(t as any)[lang || "en"]}</div>
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem><Link href="/en" replace><ReactCountryFlag countryCode="GB" className="mr-2" style={flagStyle} />{t.en}</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/pl" replace><ReactCountryFlag countryCode="PL" className="mr-2" style={flagStyle} />{t.pl}</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/ru" replace><ReactCountryFlag countryCode="RU" className="mr-2" style={flagStyle} />{t.ru}</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/ua" replace><ReactCountryFlag countryCode="UA" className="mr-2" style={flagStyle} />{t.ua}</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/en" replace><ReactCountryFlag svg className={flagClass} countryCode="GB" style={flagStyle} />{t.en}</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/pl" replace><ReactCountryFlag svg className={flagClass} countryCode="PL" style={flagStyle} />{t.pl}</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/ru" replace><ReactCountryFlag svg className={flagClass} countryCode="RU" style={flagStyle} />{t.ru}</Link></DropdownMenuItem>
+              <DropdownMenuItem><Link href="/ua" replace><ReactCountryFlag svg className={flagClass} countryCode="UA" style={flagStyle} />{t.ua}</Link></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
