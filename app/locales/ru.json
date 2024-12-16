@@ -40,5 +40,6 @@
   "contact_dialog_success": "Спасибо!",
   "contact_dialog_success_desc": "Ваш запрос отправлен",
   "contact_dialog_error": "Ой, что-то пошло не так",
-  "contact_dialog_error_desc": "При отправке вашего запроса произошла ошибка"
+  "contact_dialog_error_desc": "При отправке вашего запроса произошла ошибка",
+  "session_duration": "1.5 ч"
 }

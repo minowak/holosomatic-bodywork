@@ -40,5 +40,6 @@
   "contact_dialog_success": "Thank you!",
   "contact_dialog_success_desc": "Your request has been sent",
   "contact_dialog_error": "Ooops, something went wrong",
-  "contact_dialog_error_desc": "There was an error sending your request"
+  "contact_dialog_error_desc": "There was an error sending your request",
+  "session_duration": "1.5H"
 }
