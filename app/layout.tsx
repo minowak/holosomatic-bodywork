@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     "chakras",
     "taoism",
     "wilhelm reich",
+    "yuliia pinchuk"
   ]
 };
 
