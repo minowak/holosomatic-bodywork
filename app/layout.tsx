@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "@/globals.css";
 
 import { Nunito_Sans } from 'next/font/google';
@@ -58,6 +59,7 @@ export default function RootLayout({
       <body>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-NKD2B79WMG" />
     </html>
   );
 }
