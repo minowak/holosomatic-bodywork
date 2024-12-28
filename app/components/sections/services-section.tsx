@@ -53,9 +53,9 @@ export const ServiceSection: React.FC<ServiceSectionProps> = ({ number, title, d
         <div className="text-secondaryDark italic text-5xl font-semibold font-libreBodoni">{number}</div>
         <div className="text-primary font-bold">{title}</div>
       </div>
-      <div className="text-primary ml-[70px]">
+      <div className="text-primary ml-[60px]">
         {desc}
-        <div className="pt-8 italic text-secondaryDark font-semibold text-xl font-libreBodoni">
+        <div className="pt-8 italic text-secondaryDark font-semibold text-3xl font-libreBodoni">
           {price}
         </div>
       </div>

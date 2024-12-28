@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "@/globals.css";
 
-import { Nunito_Sans } from 'next/font/google';
-import { Libre_Bodoni } from 'next/font/google';
+import { Nunito_Sans, Catamaran } from 'next/font/google';
+import { Libre_Bodoni, Caveat } from 'next/font/google';
 
 
-const nunitoSans = Nunito_Sans({
+const nunitoSans = Catamaran({
   subsets: ['latin'],
   variable: '--font-nunito-sans'
 })
 
-const libreBodoni = Libre_Bodoni({
+const libreBodoni = Caveat({
   subsets: ['latin'],
   variable: '--font-libre-bodoni'
 })
@@ -44,7 +44,10 @@ export const metadata: Metadata = {
     "chakras",
     "taoism",
     "wilhelm reich",
-    "yuliia pinchuk"
+    "yuliia pinchuk",
+    "krakow",
+    "cracow",
+    "poland"
   ]
 };
 

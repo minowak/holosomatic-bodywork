@@ -13,7 +13,7 @@ export const GallerySection: React.FC<SectionProps> = ({ anchor, lang }) => {
             <div className="text-primary font-semibold text-4xl max-w-[580px] text-center">
               {t.quote}
             </div>
-            <div className="text-center text-secondaryDark italic mt-4 font-libreBodoni">
+            <div className="text-3xl text-center text-secondaryDark italic mt-4 font-libreBodoni">
               - Lao Tzu
             </div>
           </div>
