@@ -24,13 +24,13 @@ export const ServicesSection: React.FC<SectionProps> = ({ anchor, lang }) => {
               number="01"
               title={t.individual_session}
               desc={t.individual_session_description}
-              price={`${t.session_duration} - 100zł`}
+              price={`${t.session_duration} - 200zł`}
             />
             <ServiceSection
               number="02"
               title={t.group_session}
               desc={t.group_session_description}
-              price={`${t.session_duration} - 50zł`}
+              price={`${t.session_duration} - 80zł`}
             />
           </div>
         </div>
