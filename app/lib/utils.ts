@@ -24,3 +24,5 @@ export function getTranslations(lang?: Language | undefined) {
   }
   return en;
 }
+
+export const STRIPE_PUBLIC_KEY = "pk_test_51RI0bRRwlXQ8VD1QkShNhAwLwbnDRxfCUXvYzP7Jsuottxcw9x0nCaO1cQX7rTE33JPSbbvpk0Tp8VqLMArSDdHP00equVTKmN"

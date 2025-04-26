@@ -27,11 +27,11 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
           </div>
         </div>
         <menu className="md:flex gap-4 flex-1 justify-center hidden items-center">
-          <MenuItem label={t.home} anchor="home" />
-          <MenuItem label={t.services} anchor="services" />
-          <MenuItem label={t.about} anchor="about-me" />
-          <MenuItem label={t.method} anchor="about-the-method" />
-          <MenuItem label={t.contact} anchor="contact" />
+          <MenuItem lang={lang} label={t.home} anchor="home" />
+          <MenuItem lang={lang} label={t.services} anchor="services" />
+          <MenuItem lang={lang} label={t.about} anchor="about-me" />
+          <MenuItem lang={lang} label={t.method} anchor="about-the-method" />
+          <MenuItem lang={lang} label={t.contact} anchor="contact" />
         </menu>
         <div className="md:flex-1 text-right text-sm font-semibold">
           <DropdownMenu>
@@ -70,12 +70,13 @@ export const Header: React.FC<SectionProps> = ({ lang }) => {
 }
 
 type MenuItemProps = {
+  lang?: string;
   label: string;
   anchor?: string;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ label, anchor }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ lang, label, anchor }) => {
   return <div className="duration-150 hover:text-secondary cursor-pointer text-center">
-    <a href={"#" + anchor}>{label}</a>
+    <a href={`/${lang || "en"}#` + anchor}>{label}</a>
   </div>
 }
