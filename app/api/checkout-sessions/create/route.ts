@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
 export async function POST(req: NextRequest) {
   const requestUrl = new URL(req.url || "");
-  const origin = req.headers.get("host");
+  const origin = "https://yuliiapinchuk.com";
   const lang = requestUrl.searchParams.get("lang") || "en";
   const priceId = requestUrl.searchParams.get("price");
 
