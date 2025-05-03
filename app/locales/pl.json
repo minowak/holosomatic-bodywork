@@ -41,5 +41,7 @@
   "contact_dialog_success_desc": "Twoje zapytanie zostało wysłane",
   "contact_dialog_error": "Ups, coś poszło nie tak",
   "contact_dialog_error_desc": "Wystąpił błąd podczas wysyłania Twojego żądania",
-  "session_duration": "1.5 godz."
+  "session_duration": "1.5 godz.",
+  "delta_cure": "DeltaCure to holistyczna metoda wykorzystująca moc fal mózgowych delta o częstotliwości 4 Hz — naturalnie związanych z głębokim snem, regeneracją i podświadomym uzdrawianiem. To podejście prowadzi Cię do głęboko zrelaksowanego stanu, w którym ciało może uzyskać dostęp do swojej wrodzonej zdolności do uzdrawiania, uwalniania blokad emocjonalnych i przywracania równowagi na poziomie fizycznym, emocjonalnym i energetycznym.\n\nZostała zaprojektowana, aby delikatnie wprowadzać Cię w stan, w którym ciało może naturalnie aktywować swoją wewnętrzną inteligencję uzdrawiającą, oferując głęboką transformację bez potrzeby świadomego wysiłku czy analizy.\n\nNiezależnie od tego, czy zmagasz się ze stresem, fizycznym dyskomfortem, czy ranami emocjonalnymi, DeltaCure zaprasza cały Twój system do powrotu do naturalnego stanu harmonii i dobrostanu.",
+  "delta_cure_title": "DeltaCure"
 }

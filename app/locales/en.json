@@ -41,5 +41,7 @@
   "contact_dialog_success_desc": "Your request has been sent",
   "contact_dialog_error": "Ooops, something went wrong",
   "contact_dialog_error_desc": "There was an error sending your request",
-  "session_duration": "1.5H"
+  "session_duration": "1.5H",
+  "delta_cure": "DeltaCure is a holistic method that uses the power of 4 Hz delta brainwave frequencies—naturally linked to deep sleep, restoration, and subconscious healing. This approach guides you into a deeply relaxed state where your body can access its innate ability to heal, release emotional blocks, and restore balance on a physical, emotional, and energetic level.\n\nIt's designed to gently guide you into a space where the body can naturally activate its inner healing intelligence, offering profound transformation without the need for conscious effort or analysis.\n\nWhether you're dealing with stress, physical discomfort, or emotional wounds, DeltaCure invites your whole system to return to its natural state of harmony and well-being.",
+  "delta_cure_title": "DeltaCure"
 }
