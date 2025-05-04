@@ -26,4 +26,4 @@ export function getTranslations(lang?: Language | undefined) {
 }
 
 export const STRIPE_PUBLIC_KEY =
-  "pk_test_51RL7CXPFowb4WdH61FksLVCw7VAoigd50zzqnF0aL9fwOP69K3XopdLwP9FEqxWqfkpv7Ad2ca6f7TKZuQeYu8iC00E7VNXeVL";
+  "pk_live_51RGmTaAsdVDccK96fTFcjtMWdmTHBA0IF2xed50OS9EvRIn7dtU5962cCfsnJq0AM570uOgneiXpHHgG6rn6a91I00j89PDxs4";

@@ -2,6 +2,7 @@ import bgImage from "@/assets/bg3.avif";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionProps } from "./types";
 import { getTranslations } from "@/lib/utils";
+import StripeProducts from "../stripe/stripe-products";
 
 export const AboutTheMethodSection: React.FC<SectionProps> = ({
   anchor,
@@ -49,6 +50,15 @@ export const AboutTheMethodSection: React.FC<SectionProps> = ({
             {t.movement_therapy_desc}
             <div className="font-medium mt-2">{t.delta_cure_title}</div>
             {t.delta_cure}
+          </div>
+          <div className="whitespace-pre-wrap text-primary max-w-[710px] font-thin leading-8 mx-8 md:mx-0">
+            <div className="font-medium text-xl mt-8">Audio recordings</div>
+            <div
+              id="recordings"
+              className="flex flex-wrap gap-4 justify-center items-center mt-4"
+            >
+              <StripeProducts />
+            </div>
           </div>
         </div>
       </div>
