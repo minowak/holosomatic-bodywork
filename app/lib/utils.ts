@@ -1,5 +1,5 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import en from "@/locales/en.json";
 import pl from "@/locales/pl.json";
@@ -7,7 +7,7 @@ import ua from "@/locales/ua.json";
 import ru from "@/locales/ru.json";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export type Language = "en" | "pl" | "ru" | "ua";
@@ -25,4 +25,5 @@ export function getTranslations(lang?: Language | undefined) {
   return en;
 }
 
-export const STRIPE_PUBLIC_KEY = "pk_test_51RI0bRRwlXQ8VD1QkShNhAwLwbnDRxfCUXvYzP7Jsuottxcw9x0nCaO1cQX7rTE33JPSbbvpk0Tp8VqLMArSDdHP00equVTKmN"
+export const STRIPE_PUBLIC_KEY =
+  "pk_test_51RL7CXPFowb4WdH61FksLVCw7VAoigd50zzqnF0aL9fwOP69K3XopdLwP9FEqxWqfkpv7Ad2ca6f7TKZuQeYu8iC00E7VNXeVL";

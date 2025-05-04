@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   const request = data["request"];
 
   sendEmail(
-    "alejajestemmondry@gmail.com",
+    "juliannapinchuk@gmail.com",
     "[Holosomatic Bodywork] New request",
     `From: ${name}<br/>Email: ${email}<br/><br/>=== Request ===<br/>${request}`,
   );
