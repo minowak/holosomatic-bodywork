@@ -43,9 +43,9 @@ export default function StripeProducts() {
             onClick={() => handleCheckout(price)}
           >
             <div className="font-semibold">{product.name}</div>
-            <div className="text-center p-0 -mt-2">
-              ({((price?.unit_amount || 0) / 100).toFixed(2)}
-              {price?.currency.toUpperCase()})
+            <div className="text-center p-0 -mt-2 italic">
+              {((price?.unit_amount || 0) / 100).toFixed(2)}
+              {price?.currency.toUpperCase()}
             </div>
           </div>
         );

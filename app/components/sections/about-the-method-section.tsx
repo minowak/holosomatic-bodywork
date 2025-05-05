@@ -37,22 +37,22 @@ export const AboutTheMethodSection: React.FC<SectionProps> = ({
             <br />
             {t.method_desc_2}
             <br />
-            <div className="font-medium text-xl mt-4">
+            <div className="font-semibold text-xl mt-4">
               {t.hollistic_approach}
             </div>
-            <div className="font-medium mt-2">{t.connected_breathwork}</div>
+            <div className="font-semibold mt-2">{t.connected_breathwork}</div>
             {t.conencted_breathwork_desc}
-            <div className="font-medium mt-2">{t.energy_work}</div>
+            <div className="font-semibold mt-2">{t.energy_work}</div>
             {t.energy_work_desc}
-            <div className="font-medium mt-2">{t.body_mapping}</div>
+            <div className="font-semibold mt-2">{t.body_mapping}</div>
             {t.body_mapping_desc}
-            <div className="font-medium mt-2">{t.movement_therapy}</div>
+            <div className="font-semibold mt-2">{t.movement_therapy}</div>
             {t.movement_therapy_desc}
-            <div className="font-medium mt-2">{t.delta_cure_title}</div>
+            <div className="font-semibold mt-2">{t.delta_cure_title}</div>
             {t.delta_cure}
           </div>
           <div className="whitespace-pre-wrap text-primary max-w-[710px] font-thin leading-8 mx-8 md:mx-0">
-            <div className="font-medium text-xl mt-8">Audio recordings</div>
+            <div className="font-bold text-xl mt-8">{t.audio_recordings}</div>
             <div
               id="recordings"
               className="flex flex-wrap gap-4 justify-center items-center mt-4"
